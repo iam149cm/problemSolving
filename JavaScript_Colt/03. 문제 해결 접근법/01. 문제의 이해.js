@@ -13,7 +13,7 @@
 // 5. Look back and refactor
 
 
-/** 🌟 Understand the problem : 문제를 이해하기
+/** 🌟 Understand the problem 👉 문제를 이해하기
  * 1. Can I restate the problem in my own words ?
  * 2. What are the inputs that go into the problem?
  * --> 숫자면? 정수 or 소수? 아주 큰 숫자라면? 
