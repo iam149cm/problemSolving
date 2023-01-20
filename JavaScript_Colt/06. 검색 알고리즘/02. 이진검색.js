@@ -5,6 +5,10 @@
  * - Binary search only works on sorted arrays!
  * 
  * 🌟 기본적인 개념 : Divide and Conquer!
+ * 
+ * 🌟 이진검색 Big O
+ * - Best Case : O(1) 👉 한번에 찾을 수 있다면
+ * - Worst, Average Case : O(log N) 👉 사실상 O(1) 과 성능면에서 다를 바 없음 
  */
 
 function binarySearch1(arr, val) {
@@ -45,7 +49,7 @@ function binarySearch2(arr, elem) {
         
         middle = Math.floor((start + end) / 2); 
     }
-    
+
     return arr[middle] === elem ? middle : -1;
 }
 
