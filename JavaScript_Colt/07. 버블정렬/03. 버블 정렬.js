@@ -21,8 +21,8 @@ const swap2 = (arr, idx1, idx2) => {
 
 
 function bubbleSort(arr) {
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < arr.length; j++) {
+    for (let i = arr.length; i > 0; i--) { // 비교하는 횟수를 점점 줄인다.
+        for (let j = 0; j < i - 1; j++) { 
             console.log(arr)
             if(arr[j] > arr[j+1]) {
                 // SWAP
@@ -36,7 +36,35 @@ function bubbleSort(arr) {
 }
 
 
-console.log(bubbleSort([23, 56, 12, 8]));
+// bubbleSort([23, 56, 12, 8, 88, -3]);
 // [23, 12, 8, 56]
 // [12, 8, 23, 56]
 // [8, 12, 23, 56]
+
+/** ✨ 버블 정렬 최적화
+ * - 만약에 데이터가 거의 정렬이 된 상태거나 이미 정렬이 완료되었다면 버블 정렬을 할 필요가 없다.
+ * - 일반적으로 O(N²) 이나 noSwap 옵션으로 O(N) 에 가까워졌다.
+ */ 
+
+// optimized with noSwap
+function bubbleSort2(arr) {
+    var noSwaps;
+    for (let i = arr.length; i > 0; i--) { // 비교하는 횟수를 점점 줄인다.
+        noSwaps = true; 
+
+        for (let j = 0; j < i - 1; j++) { 
+            console.log(arr)
+            if(arr[j] > arr[j+1]) {
+                // SWAP
+                var temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+                noSwaps = false; // 교환을 하게되면 false
+            }
+        }
+        if(noSwaps) break;  // swap 하지 않았다면 루프에서 빠져나와라 --> 반복문 실행 횟수를 줄인다
+    }
+    return arr;
+}
+
+bubbleSort2([8,1,2,3,4,5,6,7]);
