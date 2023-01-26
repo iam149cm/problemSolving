@@ -16,6 +16,7 @@
  * 1. Sorting is an incredibly common task, so it's good to know how it works
  * 2. There are many different ways to sort things, and different techniques have their
  * own advantages and disadvantages.
+ * 3. Comes up the interview.
  * 
  * 👉 데이터의 상태에 따라 (Random, Nearly Sorted, Reversed, Few Unique) 정렬되는 속도가 알고리즘별로 다르다.
  */
