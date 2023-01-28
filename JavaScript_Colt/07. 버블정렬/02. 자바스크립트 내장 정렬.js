@@ -23,3 +23,4 @@ function compareByLen(str1, str2) {
 
 const result = ["Steele", "Colt" , "Data Structures" , "Algorithms" ].sort(compareByLen);
 console.log(result);
+
